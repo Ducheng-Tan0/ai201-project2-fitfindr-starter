@@ -120,7 +120,7 @@ def search_listings(
         scored.append((score, item))
 
     # ── Step 4: Drop zero-score listings ─────────────────────────────────────
-    scored = [(score, item) for score, item in scored if score > 0]
+    scored = [(score, item) for score, item in scored if score > 2]
 
     # ── Step 5: Sort by score descending ─────────────────────────────────────
     scored.sort(key=lambda x: x[0], reverse=True)
